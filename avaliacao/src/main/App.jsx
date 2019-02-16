@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 import Widgets from '../components/Widgets'
+import Chart from '../components/Chart'
 
 export default props =>
     <main className="main container-fluid">
@@ -11,7 +12,8 @@ export default props =>
             <h1>Dashboard</h1>
         </header>
         <section className="content">
-            <Widgets></Widgets>
+            <Widgets />
+            <Chart />
         </section>
 
     </main>

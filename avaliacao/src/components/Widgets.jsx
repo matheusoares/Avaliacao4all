@@ -22,7 +22,7 @@ export default class Widgets extends Component {
         let rpn = { shortFormat: true };
         return (
             <div className="row m-0 px-3 py-5 d-flex justify-content-around">
-                <div className="col-12 col-sm-5 col-md-2 mb-4">
+                <div className="col-12 col-sm-5 col-lg-2 mb-4">
                     <div className="row">
                         <div className="col-5 bg-primary widget-icon-side">
                             <i className="fa fa-shopping-bag"></i>
@@ -33,7 +33,7 @@ export default class Widgets extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-sm-5 col-md-2 mb-4">
+                <div className="col-12 col-sm-5 col-lg-2 mb-4">
                     <div className="row">
                         <div className="col-5 bg-warning widget-icon-side">
                             <i className="fa fa-comment"></i>
@@ -44,7 +44,7 @@ export default class Widgets extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-sm-5 col-md-2 mb-4">
+                <div className="col-12 col-sm-5 col-lg-2 mb-4">
                     <div className="row">
                         <div className="col-5 bg-info widget-icon-side">
                             <i className="fa fa-user"></i>
@@ -55,7 +55,7 @@ export default class Widgets extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-sm-5 col-md-2 mb-4">
+                <div className="col-12 col-sm-5 col-lg-2 mb-4">
                     <div className="row">
                         <div className="col-5 bg-danger widget-icon-side">
                             <i className="fa fa-newspaper-o"></i>
