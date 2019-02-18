@@ -1,6 +1,5 @@
-import React, { Component } from "react"
-import ReactChartkick, { AreaChart } from 'react-chartkick'
-import ChartKick from 'chart.js'
+import React, { PureComponent, Fragment } from 'react';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 import './Chart.css'
 
@@ -8,27 +7,38 @@ import './Chart.css'
 import api from '../services/Api'
 
 
-export default class Chart extends Component {
+export default class Chart extends PureComponent {
 
     state = {
-        visualizador: {}
+        visualizador: []
     }
 
     async componentDidMount() {
         const response = await api.get(`/pageViews`)
         this.setState({ visualizador: response.data })
     }
- 
-
     render() {
-        let varl = { "2017-01-01 00:00:00 -0800": 2, "2017-01-01 00:01:00 -0800": 5 }
-        let varial = this.state.visualizador.value
-         console.log(varial)
+
+        const { visualizador } = this.state
         return (
-            <React.Fragment>
-                
-                <AreaChart data={this.state.visualizador.values} />
-            </React.Fragment>
+            <Fragment>
+                <div className="row m-0 mb-4 px-1 rounded">
+                    <div className="col-12 col-sm-11 py-4 mx-sm-auto bg-white">
+                        <h1 className="h4 mx-md-5">Site Traffic Overview</h1>
+                        <hr className="ml-md-5"/>
+                        <ResponsiveContainer className="graphic">
+                            <AreaChart data={visualizador} >
+                                <CartesianGrid strokeDasharray="1 1" />
+                                <XAxis dataKey="month" />
+                                <YAxis dataKey="views" />
+                                <Tooltip />
+                                <Area type="monotone" dataKey="views" stroke="#68BBFD" fill="#D0E7F9" />
+                            </AreaChart>
+                        </ResponsiveContainer>
+                    </div>
+                </div>
+
+            </Fragment>
         )
     }
 

@@ -4,6 +4,7 @@ import './App.css'
 
 import Widgets from '../components/Widgets'
 import Chart from '../components/Chart'
+import Chat from '../components/Chat'
 
 export default props =>
     <main className="main container-fluid">
@@ -14,6 +15,7 @@ export default props =>
         <section className="content">
             <Widgets />
             <Chart />
+            <Chat />
         </section>
 
     </main>

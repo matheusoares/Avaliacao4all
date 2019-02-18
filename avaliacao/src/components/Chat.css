@@ -1,0 +1,42 @@
+.chat-box{
+    overflow-y: scroll;
+    max-height: 300px;
+    min-height: 100px;
+}
+
+.msg-title{
+    font-size: 16px;
+    font-weight: bold;   
+}
+.msg-time{
+    font-size: 12px;
+    margin-left: 5px;
+    color: #aaa;
+}
+.msg-text{
+    text-align: left;
+    order: 2;
+}
+.img-text{
+    align-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+.img-left, .img-right{
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    border-radius: 50%;
+}
+.img-left{
+    order: 1;
+    margin-right: 20px;
+    margin-left: 0;
+    background: #ff5544;
+}
+.img-right{
+    order: 3;
+    margin-left: 20px;
+    margin-right: 0;
+}
